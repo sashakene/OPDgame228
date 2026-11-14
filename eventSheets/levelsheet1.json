@@ -1,0 +1,116 @@
+{
+	"name": "levelsheet1",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 866126751175165
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 115756734936613,
+					"parameters": {
+						"audio-file": {
+							"path": "Ghost step"
+						},
+						"loop": "looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"music\""
+					}
+				}
+			],
+			"sid": 888688612774381
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 251175282758334,
+					"parameters": {
+						"key": 69
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Player",
+					"sid": 370432852771408,
+					"parameters": {
+						"object": "Robot"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Robot",
+					"sid": 315779165851462,
+					"parameters": {
+						"animation": "\"salute\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "erase-tile-range",
+					"objectClass": "Tilemap2",
+					"sid": 476694320086370,
+					"parameters": {
+						"tile-x": "42",
+						"tile-y": "28",
+						"width": "1",
+						"height": "3"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Text2",
+					"sid": 583219441991324,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 418658996192170,
+					"parameters": {
+						"audio-file": {
+							"path": "knopka-ispolzovaniya"
+						},
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 292446257520185,
+					"parameters": {
+						"seconds": "1.0",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Text2",
+					"sid": 918351777913087,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 978538232427526
+		}
+	],
+	"sid": 822649772911107
+}

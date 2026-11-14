@@ -1,0 +1,171 @@
+{
+	"name": "levelsheet3",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 485389893193577
+				}
+			],
+			"actions": [
+				{
+					"id": "fade-volume",
+					"objectClass": "Audio",
+					"sid": 764698079990961,
+					"parameters": {
+						"tag": "\"music\"",
+						"db": "-100",
+						"duration": "3",
+						"ending": "stop"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 265114145305130,
+					"parameters": {
+						"audio-file": {
+							"path": "Ferotonin75"
+						},
+						"loop": "looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"music\""
+					}
+				},
+				{
+					"id": "stop-animation",
+					"objectClass": "LazerGun",
+					"sid": 750292120961949
+				}
+			],
+			"sid": 290242276249039
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 645924215966506,
+					"parameters": {
+						"interval-seconds": "5"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "LazerGun",
+					"sid": 302953928294851,
+					"parameters": {
+						"animation": "\"start\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "start-animation",
+					"objectClass": "LazerGun",
+					"sid": 885114024992452,
+					"parameters": {
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 538441024458887
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-animation-frame-tag",
+					"objectClass": "LazerGun",
+					"sid": 679885844142286,
+					"parameters": {
+						"comparison": 0,
+						"tag": "\"end\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "LazerGun",
+					"sid": 489643079605144,
+					"parameters": {
+						"animation": "\"active\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "LazwrRay",
+					"sid": 203582956159988,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "start-animation",
+					"objectClass": "LazwrRay",
+					"sid": 144233042466328,
+					"parameters": {
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 511798512487138,
+					"parameters": {
+						"seconds": "2.0",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "LazwrRay",
+					"sid": 846314982429072,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "LazerGun",
+					"sid": 437331533154756,
+					"parameters": {
+						"animation": "\"stop\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 666283157292940
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Player",
+					"sid": 273842233790244,
+					"parameters": {
+						"object": "LazwrRay"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 281996480103758
+				}
+			],
+			"sid": 998107573011120
+		}
+	],
+	"sid": 340407907823836
+}

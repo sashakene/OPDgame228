@@ -1,0 +1,236 @@
+{
+	"name": "levelsheet2",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 721757847005060
+				}
+			],
+			"actions": [
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "LazwrRay",
+					"sid": 739863745316119,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "LazerGun",
+						"x": false,
+						"y": true,
+						"angle": false,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				}
+			],
+			"sid": 956747838494163
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 709533939183785,
+					"parameters": {
+						"key": 69
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Player",
+					"sid": 650917883284613,
+					"parameters": {
+						"object": "Robot"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Robot",
+					"sid": 158739069841305,
+					"parameters": {
+						"animation": "\"salute\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Text2",
+					"sid": 556910356043968,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "erase-tile-range",
+					"objectClass": "Tilemap2",
+					"sid": 321630505258026,
+					"parameters": {
+						"tile-x": "39",
+						"tile-y": "54",
+						"width": "3",
+						"height": "1"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 935695623982770,
+					"parameters": {
+						"audio-file": {
+							"path": "knopka-ispolzovaniya"
+						},
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 292276629522999,
+					"parameters": {
+						"seconds": "1.0",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Text2",
+					"sid": 880806383546129,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "move-to-position",
+					"objectClass": "LazerGun",
+					"sid": 941703665128399,
+					"behaviorType": "MoveTo",
+					"parameters": {
+						"x": "78",
+						"y": "0",
+						"mode": "direct"
+					}
+				},
+				{
+					"id": "fade-volume",
+					"objectClass": "Audio",
+					"sid": 619440310601123,
+					"parameters": {
+						"tag": "\"music\"",
+						"db": "-100",
+						"duration": "1",
+						"ending": "stop"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 416308514523401,
+					"parameters": {
+						"audio-file": {
+							"path": "Devour"
+						},
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"music\""
+					}
+				}
+			],
+			"sid": 873870908505695
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Robot",
+					"sid": 584384905529379,
+					"parameters": {
+						"object": "LazwrRay"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Robot",
+					"sid": 314257714861598,
+					"parameters": {
+						"instance-variable": "Health",
+						"comparison": 1,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Robot",
+					"sid": 885690109938924,
+					"parameters": {
+						"instance-variable": "Health",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-default-color",
+					"objectClass": "Robot",
+					"sid": 320890090540587,
+					"parameters": {
+						"color": "rgbEx(255, 0, 0)"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 540518411728039,
+					"parameters": {
+						"seconds": "1.0",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "set-default-color",
+					"objectClass": "Robot",
+					"sid": 782952662672937,
+					"parameters": {
+						"color": "rgbEx(0, 0, 0)"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "Robot",
+					"sid": 281627273857900,
+					"parameters": {
+						"animation": "\"death\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 174214062797453,
+					"parameters": {
+						"audio-file": {
+							"path": "explosion-sound"
+						},
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 738304059166765
+		}
+	],
+	"sid": 313272784234407
+}

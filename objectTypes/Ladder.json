@@ -1,0 +1,30 @@
+{
+	"name": "Ladder",
+	"plugin-id": "Tilemap",
+	"sid": 661898417131990,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "jumpthru",
+			"name": "Jumpthru",
+			"sid": 509965970367887
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 30,
+		"height": 30,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"fileType": "image/png",
+		"imageSpriteId": 5047882,
+		"useCollisionPoly": true,
+		"tag": ""
+	},
+	"tile-collision-polys": {}
+}
