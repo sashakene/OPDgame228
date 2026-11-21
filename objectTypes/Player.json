@@ -4,7 +4,15 @@
 	"sid": 249700673120538,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "HitPoints",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 705440073914268
+		}
+	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "Bullet",

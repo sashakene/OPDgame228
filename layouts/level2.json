@@ -76,10 +76,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 664,
+						"x": 607.0149668006616,
 						"y": 1838,
 						"width": 26.58098054622758,
-						"height": 1177.0931756941209,
+						"height": 1272.1921788962793,
 						"originX": 0.5,
 						"originY": 0.5454545454545454,
 						"color": [
@@ -224,7 +224,9 @@
 					"uid": 14,
 					"sid": 882616736354038,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"HitPoints": 10
+					},
 					"behaviors": {
 						"Bullet": {
 							"properties": {

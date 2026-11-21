@@ -1,5 +1,6 @@
 import * as PlayerScripts from "./player.js";
-import * as WeaponScripts from "./weapon.js";
+//import * as WeaponScripts from "./weapon.js";
+import * as EnemysScripts from "./enemy.js";
 
 // Import any other script files here, e.g.:
 // import * as myModule from "./mymodule.js";
@@ -25,8 +26,12 @@ function Tick(runtime) {
 
     PlayerScripts.Main(runtime, player, mouse);
     
+    for(const enemy of runtime.objects.Enemy.instances())
+        EnemysScripts.Main(runtime, enemy, player);
+
+
     if (robot!==null && robot.animationFrameTag=='end')
-        robot.setAnimation('idle')
+        robot.setAnimation('idle');
 
     if (runtime.collisions.testOverlap(player, levelTrigger) && newlevel) {
         newlevel = false;
@@ -35,8 +40,8 @@ function Tick(runtime) {
         newlevel = true;
     }
 
-    //the hell it is not working on level 3?
-    if (runtime.collisions.testOverlap(player, lazer)) {
+    if (player.instVars.HitPoints<=0) {
         runtime.goToLayout('level' + level);
     }
+    //the hell it is not working on level 3?
 }

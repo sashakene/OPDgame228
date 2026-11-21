@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 50603,
+	"savedWithRelease": 50604,
 	"name": "test1_3",
 	"runtime": "c3",
 	"useWorker": "auto",
@@ -64,6 +64,13 @@
 		},
 		{
 			"type": "behavior",
+			"id": "LOS",
+			"name": "Line of sight",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "MoveTo",
 			"name": "Move To",
 			"author": "Scirra",
@@ -80,6 +87,13 @@
 			"type": "behavior",
 			"id": "Platform",
 			"name": "Platform",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "destroy",
+			"name": "Destroy outside",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -121,7 +135,9 @@
 			"LazerGun",
 			"LazwrRay",
 			"Audio",
-			"enemy"
+			"Enemy",
+			"Bullet",
+			"FriendlyBullet"
 		],
 		"subfolders": []
 	},
@@ -136,8 +152,7 @@
 		"items": [
 			"level1",
 			"level2",
-			"level3",
-			"level4"
+			"level3"
 		],
 		"subfolders": []
 	},
@@ -153,17 +168,9 @@
 		"script": {
 			"items": [
 				{
-					"name": "weapon.js",
+					"name": "importsForEvents.js",
 					"type": "text/javascript",
-					"sid": 633547068272463,
-					"script-info": {
-						"purpose": "none"
-					}
-				},
-				{
-					"name": "player.js",
-					"type": "text/javascript",
-					"sid": 921573273369894,
+					"sid": 886429214567795,
 					"script-info": {
 						"purpose": "none"
 					}
@@ -171,9 +178,33 @@
 				{
 					"name": "main.js",
 					"type": "text/javascript",
-					"sid": 797542542439136,
+					"sid": 975950203835927,
 					"script-info": {
 						"purpose": "main"
+					}
+				},
+				{
+					"name": "player.js",
+					"type": "text/javascript",
+					"sid": 691523598230955,
+					"script-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "weapon.js",
+					"type": "text/javascript",
+					"sid": 220599546321290,
+					"script-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "enemy.js",
+					"type": "application/javascript",
+					"sid": 756901414939387,
+					"script-info": {
+						"purpose": "none"
 					}
 				}
 			],

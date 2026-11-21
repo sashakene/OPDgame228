@@ -257,6 +257,46 @@
 					}
 				},
 				{
+					"type": "LazwrRay",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 26,
+					"sid": 665261447167819,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Pin": {
+							"properties": {
+								"destroy": false
+							}
+						}
+					},
+					"materialSurfaceType": "smooth",
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 537,
+						"y": 358,
+						"width": 180.48077479235306,
+						"height": 115.78420498382746,
+						"originX": 0.5,
+						"originY": 0.5454545454545454,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"z": 1,
+						"angle": 1.5707963267948966
+					}
+				},
+				{
 					"type": "Text",
 					"properties": {
 						"text": "WASD to move\nShift to dash",
@@ -368,7 +408,9 @@
 					"uid": 4,
 					"sid": 242066618812796,
 					"tags": "",
-					"instanceVariables": {},
+					"instanceVariables": {
+						"HitPoints": 10
+					},
 					"behaviors": {
 						"Bullet": {
 							"properties": {
@@ -405,8 +447,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 322,
-						"y": 122,
+						"x": 320,
+						"y": 136,
 						"width": 47,
 						"height": 62,
 						"originX": 0.5,
@@ -463,6 +505,6 @@
 	"ambientLight": 0.03,
 	"vpX": 0.5,
 	"vpY": 0.5,
-	"projection": "perspective",
+	"projection": "orthographic",
 	"eventSheet": "levelsheet1"
 }

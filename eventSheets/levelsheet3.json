@@ -60,7 +60,7 @@
 				{
 					"id": "set-animation",
 					"objectClass": "LazerGun",
-					"sid": 302953928294851,
+					"sid": 737235503075557,
 					"parameters": {
 						"animation": "\"start\"",
 						"from": "beginning"
@@ -69,13 +69,14 @@
 				{
 					"id": "start-animation",
 					"objectClass": "LazerGun",
-					"sid": 885114024992452,
+					"sid": 787879379450120,
 					"parameters": {
 						"from": "beginning"
 					}
 				}
 			],
-			"sid": 538441024458887
+			"sid": 538441024458887,
+			"disabled": true
 		},
 		{
 			"eventType": "block",
@@ -143,28 +144,37 @@
 					}
 				}
 			],
-			"sid": 666283157292940
+			"sid": 666283157292940,
+			"disabled": true
 		},
 		{
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "is-overlapping-another-object",
-					"objectClass": "Player",
-					"sid": 273842233790244,
+					"id": "on-click",
+					"objectClass": "Mouse",
+					"sid": 878377404831101,
 					"parameters": {
-						"object": "LazwrRay"
+						"mouse-button": "right",
+						"click-type": "clicked"
 					}
 				}
 			],
 			"actions": [
 				{
-					"id": "restart-layout",
-					"objectClass": "System",
-					"sid": 281996480103758
+					"id": "spawn-another-object",
+					"objectClass": "Player",
+					"sid": 129769588224021,
+					"parameters": {
+						"object": "FriendlyBullet",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
 				}
 			],
-			"sid": 998107573011120
+			"sid": 104759873352587
 		}
 	],
 	"sid": 340407907823836
